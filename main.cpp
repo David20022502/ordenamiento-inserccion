@@ -11,9 +11,10 @@ int main()
    cout << " ingrese el tamaño del arreglo: ";
    cin>> tam;
    datos << "elementos sin ordenar: " << endl;
+   int b=1;
    for (int i= 0;i<tam;i++)
    {
-      cout << " ingrese los elementos del arreglo: ";
+      cout << " valor " << b++ << " : ";
       cin >> valor;
       datos << valor << endl;
       arr[i]=valor;
@@ -43,17 +44,14 @@ void ordenar(int a[],int tam)
 void mostrar(int a[], int tam)
 {
   int total=0;
-  cout << "elementos ordenados" << endl;
   datos.open("ordenamiento.txt",ios::app);
   datos << "elementos ordenados" << endl;
   for(int i=0;i<tam;i++)
   {
-    cout << a[i] << endl;
     datos << a[i] << endl;
     total= total+a[i];
   }
-  cout << "total de elementos: "<< tam << endl;
-  cout << "suma de los elementos: " << total << endl;
+  cout << "elementos ordenados con exito " << endl;
    datos<< "total de elementos: "<< tam << endl;
    datos << "suma de los elementos: " << total << endl;
   datos.close();
